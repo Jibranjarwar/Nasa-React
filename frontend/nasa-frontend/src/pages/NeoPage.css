@@ -1,0 +1,37 @@
+.neo-container {
+  padding: 2rem;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.datepicker-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.neo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.neo-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  border-left: 5px solid #4caf50;
+}
+
+.neo-item.hazard {
+  border-left-color: #ff4d4d;
+}
+
+.tooltip {
+  background: #333;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
