@@ -150,7 +150,7 @@ const MarsRoverPage = () => {
         if (roverName !== 'curiosity' && roverName !== 'perseverance') {
           try {
             console.log(`Fetching info for ${roverName}...`);
-            const response = await fetch(`http://localhost:5000/mars-rover-info?rover=${roverName}`);
+            const response = await fetch(`https://nasa-react-75tq.onrender.com/mars-rover-info?rover=${roverName}`);
             
             if (!response.ok) {
               console.warn(`Failed to fetch ${roverName}: ${response.status}`);
@@ -194,7 +194,7 @@ const MarsRoverPage = () => {
 
   const fetchRoverInfo = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/mars-rover-info?rover=${selectedRover}`);
+              const response = await fetch(`https://nasa-react-75tq.onrender.com/mars-rover-info?rover=${selectedRover}`);
       const data = await response.json();
       setRoverInfo(data.rover);
     } catch (error) {
@@ -206,7 +206,7 @@ const MarsRoverPage = () => {
     setPhotoLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/mars-rover?rover=${selectedRover}&sol=${selectedSol}&camera=${selectedCamera}&page=${currentPage}`
+        `https://nasa-react-75tq.onrender.com/mars-rover?rover=${selectedRover}&sol=${selectedSol}&camera=${selectedCamera}&page=${currentPage}`
       );
       const data = await response.json();
       setPhotos(data.photos || []);

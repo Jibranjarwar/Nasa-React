@@ -202,7 +202,7 @@ const PlanetDetails = () => {
   const tellMeMore = async (planetName) => {
     setLoadingDesc(prev => ({ ...prev, [planetName]: true }));
     try {
-      const res = await fetch('http://localhost:5000/api/planet-description', {
+      const res = await fetch('https://nasa-react-75tq.onrender.com/api/planet-description', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

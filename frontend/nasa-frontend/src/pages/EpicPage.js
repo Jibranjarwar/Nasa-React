@@ -17,7 +17,7 @@ const EpicPage = () => {
   const [availableDates, setAvailableDates] = useState([]);
 
   const fetchAvailableDates = (type) => {
-    axios.get(`http://localhost:5000/epic/available?type=${type}`)
+    axios.get(`https://nasa-react-75tq.onrender.com/epic/available?type=${type}`)
       .then((res) => {
         setAvailableDates(res.data);
         const isoSelected = selectedDate.toISOString().split('T')[0];
@@ -32,7 +32,7 @@ const EpicPage = () => {
   const fetchImages = (type, date) => {
     setLoading(true);
     const isoDate = date.toISOString().split('T')[0];
-    axios.get(`http://localhost:5000/epic?type=${type}&date=${isoDate}`)
+    axios.get(`https://nasa-react-75tq.onrender.com/epic?type=${type}&date=${isoDate}`)
       .then((res) => {
         setImages(res.data);
         setLoading(false);

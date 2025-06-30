@@ -34,7 +34,7 @@ const HomePage = () => {
   const [isEarthHovered, setIsEarthHovered] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/apod')
+    axios.get('https://nasa-react-75tq.onrender.com/apod')
       .then(res => {
         if (res.data.media_type === 'image') {
           setApod(res.data);

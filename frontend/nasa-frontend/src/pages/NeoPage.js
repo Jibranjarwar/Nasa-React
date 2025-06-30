@@ -22,7 +22,7 @@ const NeoPage = () => {
     const fetchNeoData = (date) => {
         const isoDate = date.toISOString().split('T')[0];
         setLoading(true);
-        axios.get(`http://localhost:5000/neo?start_date=${isoDate}`)
+        axios.get(`https://nasa-react-75tq.onrender.com/neo?start_date=${isoDate}`)
             .then(res => {
                 const raw = res.data.near_earth_objects;
                 const formatted = Object.entries(raw).flatMap(([date, objects]) =>

@@ -28,7 +28,7 @@ function ApodPage() {
     setLoading(true);
     setError(null);
     try {
-      const url = date ? `http://localhost:5000/apod?date=${date}` : 'http://localhost:5000/apod';
+      const url = date ? `https://nasa-react-75tq.onrender.com/apod?date=${date}` : 'https://nasa-react-75tq.onrender.com/apod';
       console.log('Fetching APOD from:', url);
       const response = await axios.get(url);
       console.log('APOD response:', response.data);
@@ -58,7 +58,7 @@ function ApodPage() {
         recentDates.map(async (date, index) => {
           try {
             await new Promise(resolve => setTimeout(resolve, index * 200));
-            const response = await axios.get(`http://localhost:5000/apod?date=${date}`);
+            const response = await axios.get(`https://nasa-react-75tq.onrender.com/apod?date=${date}`);
             console.log(`APOD for ${date}:`, response.data.title);
             return response.data;
           } catch (err) {
